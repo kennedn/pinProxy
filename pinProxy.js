@@ -203,7 +203,7 @@ app.post('/ifttt',function(req,res){
 
       //We have missed it. Set for tomorrow
       if (debug) { log(`${pin.id}::ifttt::A::setDate:tomorrow1`); }
-      time.setDate(parseInt(time.getDate()+1));
+      time.setDate(parseInt(time.getDate()));
 
     } else if (adjustedTime == pin.meta.clocktime.hour) {
 
@@ -211,7 +211,7 @@ app.post('/ifttt',function(req,res){
       if (time.getMinutes() > pin.meta.clocktime.minute) {
         if (debug) { log(`${pin.id}::ifttt::A::setDate:tomorrow2`); }
         //We have missed it. Set for tomorrow
-        time.setDate(parseInt(time.getDate()+1));
+        time.setDate(parseInt(time.getDate()));
       }
 
     } else {

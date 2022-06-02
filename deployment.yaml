@@ -1,0 +1,13 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: pinproxy
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - image: quay.io/kennedn/pinproxy
+          name: pinproxy
+          ports:
+            - containerPort: 8081
