@@ -3,5 +3,7 @@ resources:
   - service.yaml
   - ingress.yaml
 
+namespace: default
+
 commonLabels:
   app: pinproxy
